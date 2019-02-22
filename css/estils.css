@@ -1,0 +1,123 @@
+h1{
+    text-align: center;
+    /*color: #92a5de;*/
+    color: white;
+    font-size: 60px;
+    
+text-shadow: 0px 0px 0 #899CD5, 1px 1px 0 #8194CD, 2px 2px 0 #788BC4, 3px 3px 0 #6F82BB, 4px 4px 0 #677AB3, 5px 5px 0 #5E71AA, 6px 6px 0 #5568A1, 7px 7px 0 #4C5F98, 8px 8px 0 #445790, 9px 9px 0 #3B4E87, 10px 10px 0 #32457E, 11px 11px 0 #2A3D76, 12px 12px 0 #21346D, 13px 13px 0 #182B64, 14px 14px 0 #0F225B, 15px 15px 0 #071A53, 16px 16px 0 #02114A, 17px 17px 0 #0B0841, 18px 18px 0 #130039, 19px 19px 0 #1C0930, 20px 20px 0 #251227, 21px 21px 20px rgba(0,0,0,1), 21px 21px 1px rgba(0,0,0,0.5), 0px 0px 20px rgba(0,0,0,.2);
+margin-bottom: 20px;
+}
+
+table{
+   
+    text-align: center;
+    width: 700px;
+    height: 700px;
+   
+    
+}
+
+#resultat{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+    background: black;
+}
+
+
+body{
+    background: linear-gradient(to bottom, #ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%);
+}
+
+td{
+   width: 200px;
+   height: 200px;
+    /*border-top: 5px solid black;*/
+}
+
+img{
+    height: 90px;
+    width: 90px;
+}
+
+td:hover{
+    background: #ebf1f6;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+
+  legend{
+      border-bottom: 5px solid black;
+  }
+  
+  .page-header{
+    border-bottom: 5px solid black;
+  }
+
+  tr:nth-child(n+2){
+      border-top: 10px solid black;
+    
+     
+      
+  }
+  
+  td{
+      border-right: 10px solid black;
+      
+   
+      
+  }
+  
+  td:nth-child(3n){
+      border: none;
+     
+  }
+
+  #table1{
+      border: none;
+      height: 200px;
+  }
+
+  #table1 td{
+      border: none;
+      width: 20px;
+      height: 20px;
+      text-align: left;
+
+  }
+ 
+  #table1 tr{
+    border: none;
+}
+
+#table1 td:hover{
+   
+    background: none;
+}
+
+body{
+    font-family: 'Audiowide', cursive;
+}

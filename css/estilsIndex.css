@@ -1,0 +1,22 @@
+.page-header{
+    text-align: center;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #fff, 0 -10px 20px 	#00008B, 0 -18px 40px #008B8B;
+}
+
+.index{
+    text-align: center;
+   height: 700px;
+}
+
+.btn{
+    margin: 10px;
+    color: white;
+    background: black;
+}
+body{
+    
+  
+    font-family: 'Audiowide', cursive;
+}

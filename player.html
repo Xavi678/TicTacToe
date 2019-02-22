@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <meta charset="UTF-8">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/estils.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">   
+    
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Tornar</a></li>
+        <li><a href="https://www.google.com" target="_blank">Google</a></li>
+      
+    </ul>
+    <div class="container">
+    <h1 class="page-header">Inici</h1>
+
+        <fieldset>
+                <legend>Formulari</legend>
+                <form name="formulario" id="formulario" action="form.html" method="get"><br>
+                  <table id="table1">
+                    <tr>
+                        <td><label for="nombre">Nombre:</label></td>
+                        <td>  <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]+" required title="Només lletres"/><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="apellidos">Apellidos:</label></td>
+                        <td>   <input type="text" name="apellidos" id="apellidos" pattern="[A-Za-z]+" required title="Només lletres" /><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="edad">Edad:</label></td>
+                        <td><input name="edad" type="number" id="edad" maxlength="3" size="3" max="105" min="0" required title="Només números, mínim 0 i màxim 105"/><br></td>
+                    </tr>
+                    <tr>
+                        <td>  <label for="nif">NIF:</label></td>
+                        <td><input name="nif" type="text" id="nif" size="10"  maxlength="10" name="nif" pattern="[0-9]{8}-[A-Z]" placeholder="" required /><br></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="email">E-mail:</label></td>
+                        <td><input name="email" type="text" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Posa el format correcte d'email" placeholder="Escriu el correu electrònic" required/><br></td>
+                    </tr>
+                    <tr>
+                      <td><label for="provincia">Provincia:</label></td>
+                      <td>
+                      <select name="provincia" id="provincia"  required>
+                        <option value="" >Seleccione Provincia</option>
+                        <option value="C">A Coruña</option>
+                        <option value="LU">Lugo</option>
+                        <option value="OU">Ourense</option>
+                        <option value="OU">Pontevedra</option>
+                      </select><br>
+                    </td>
+                    </tr>
+                    <tr>
+                      <td><label for="fecha">Fecha Nacimiento:</label></td>
+                      <td> <input name="fecha" type="text" id="fecha" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}" placeholder="DD/MM/AAAA" required /><br></td>
+                    </tr>
+                    <tr>
+                      <td> <label for="telefono">Teléfono:</label></td>
+                      <td> <input name="telefono" type="text" id="telefono" maxlength="9" pattern="[0-9]{9}" placeholder="9 números" required/><br></td>
+                    </tr>
+                    <tr>
+                      <td>  <label for="hora">Hora de visita:</label></td>
+                      <td> <input name="hora" type="text" id="hora" required /><br></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <input type="reset" name="limpiar" id="button" value="Limpiar" />
+                      
+                        <input type="submit" name="enviar" id="enviar" value="Enviar" /><br>
+                      </td>
+                    </tr>
+                 
+                  
+                </table>
+                </form> 
+                <div id="errores"></div>
+                <div id="intentos"></div>
+                </fieldset>
+            </div>
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
