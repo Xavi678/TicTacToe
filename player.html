@@ -6,9 +6,10 @@
    <meta charset="UTF-8">
     
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" type="text/css" href="css/estils.css"> 
-    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">   
     
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">   
+    <link rel="stylesheet" type="text/css" href="css/estils.css"> 
+    <link rel="stylesheet" type="text/css" href="css/validar.css"> 
 </head>
 <body>
     <ul>
@@ -21,9 +22,9 @@
 
         <fieldset>
                 <legend>Formulari</legend>
-                <form name="formulario" id="formulario" action="form.html" method="get"><br>
+                <form name="formulario" id="formulario"  action="form.html" method="get"><br>
                   <table id="table1">
-                    <tr>
+                   <tr>
                         <td><label for="nombre">Nombre:</label></td>
                         <td>  <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]+" required title="Només lletres"/><br></td>
                     </tr>
@@ -33,7 +34,7 @@
                     </tr>
                     <tr>
                         <td><label for="edad">Edad:</label></td>
-                        <td><input name="edad" type="number" id="edad" maxlength="3" size="3" max="105" min="0" required title="Només números, mínim 0 i màxim 105"/><br></td>
+                        <td><input name="edad" type="number" id="edad" maxlength="3" size="3" max="105" min="0" title="Només números, mínim 0 i màxim 105" required /><br></td>
                     </tr>
                     <tr>
                         <td>  <label for="nif">NIF:</label></td>
@@ -61,11 +62,11 @@
                     </tr>
                     <tr>
                       <td> <label for="telefono">Teléfono:</label></td>
-                      <td> <input name="telefono" type="text" id="telefono" maxlength="9" pattern="[0-9]{9}" placeholder="9 números" required/><br></td>
+                      <td> <input name="telefono" type="text" id="telefono"    pattern="[0-9]{9}" placeholder="9 números" required/><br></td>
                     </tr>
                     <tr>
                       <td>  <label for="hora">Hora de visita:</label></td>
-                      <td> <input name="hora" type="text" id="hora" required /><br></td>
+                      <td> <input name="hora" type="text" id="hora" pattern="(0[1-9]|1[0-9]|2[0-4]):[0-9]{2}" placeholder="ex: 12:56" required /><br></td>
                     </tr>
                     <tr>
                       <td></td>
@@ -79,14 +80,17 @@
                   
                 </table>
                 </form> 
-                <div id="errores"></div>
-                <div id="intentos"></div>
+                <label>Errors:</label><div id="errores"></div>
+                <label>Intents:</label><div id="intentos"></div>
+                <button id="reset">Reset Cookies</button>
+                <!--<button id="borrar">Delete cookies</button>-->
                 </fieldset>
             </div>
-
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/scriptsplayer.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
