@@ -10,6 +10,7 @@ var global=false;
 var ultimov;
 
 
+
 var td=document.getElementsByTagName("td");
 
 for(var i=0;i<td.length;i++){
@@ -144,7 +145,7 @@ function tornMaquina(){
     //alert(ultimov);
 
     var llocsBuits=[];
-    var trobat=false;
+    
 
     for(var i=0;i<3;i++){
         for(var j=0;j<3;j++){
@@ -160,11 +161,12 @@ function tornMaquina(){
     }
 
     if(llocsBuits.length!=0){
+      
         if(taula[1][1]==null){
             taula[1][1]="o";
             pos=1+""+1;
+        //posibilitatGuanyar();
         
-        }else {
 
          /*   var i=ultimov.substr(0,1);
             var j=ultimov.substr(1);
@@ -181,20 +183,62 @@ function tornMaquina(){
             }else{
               trobat=true;
             }*/
-
-            posibilitatGuanyar();
+            //trobat=false;
+            //posibilitatGuanyar();
             
 
             
+        
+        
+        
+        
+      }else{
+        //posibilitatGuanyar();
+        var ar1=[];
+        var ar2=[];
+        var ar3=[];
+         var trobat=0;
+        for(var i=0;i<llocsBuits.length;i++){
+          //llocsBuits[i].charAt(0)==0;
+          //var t=llocsBuits.indexOf(llocsBuits[i].charAt(0)==0);
+          if(llocsBuits[i].charAt(0)=="0"){
+
+            ar1.push(llocsBuits[i]);          
+          }else if(llocsBuits[i].charAt(0)=="1"){
+            ar2.push(llocsBuits[i]);         
+          }else if(llocsBuits[i].charAt(0)=="2"){
+            ar3.push(llocsBuits[i]);
+          }
         }
         
+        //trobada(ar3);
+        //trobada(ar2);
+       ///trobada(ar1);
+       if(ar2.length==1){
+        pos=ar2[0];
+        trobat=1;
         
+      }
+      if(ar1.length==1){
+        pos=ar1[0];
+        trobat=1;
         
-        if(trobat==false){
-    var pos=llocsBuits[Math.floor(Math.random()*llocsBuits.length)];
+      }
+      if(ar3.length==1){
+        pos=ar3[0];
+        trobat=1;
+        
+      }
+      var i=pos.substr(0,1);
+      var j=pos.substr(1);
+      taula[i][j]= "o";
+
+        if(trobat==0){
+   pos=llocsBuits[Math.floor(Math.random()*llocsBuits.length)];
     var i=pos.substr(0,1);
     var j=pos.substr(1);
     taula[i][j]= "o";
+        }
         }
     var elem = document.createElement("img");
    
@@ -218,31 +262,44 @@ function tornMaquina(){
         
 
       }
-      comprovar(arrayTmp);
+      comprovar(arrayTmp,i);
     }
 
     
   }
 
 
-  function comprovar(array){
+  function comprovar(array,i){
     var countx=0;
     var counto=0;
     for(var i=0;i<array.length;i++){
-      if(array[i].includes("x")){
+      if(array[i]!=undefined){
+      if(array[i].includes("x") ){
         countx++;
-      }else if(array[i].includes("o")){
+      }else if(array[i].includes("o") ){
         counto++;
       }
 
       if(counto==2){
+        var t=array.indexOf(undefined);
+
         
       }else if(countx==2){
-
+        var t=array.indexOf(undefined);
+        
       }
+    }
     }
 
 
 
   }
 
+function trobada(array){
+  if(array.length==1){
+    pos=array[0];
+    trobat=1;
+    
+  }
+
+}

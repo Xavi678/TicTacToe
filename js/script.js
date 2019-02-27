@@ -11,7 +11,7 @@ var global=false;
 
 
 
-  $("input[type='button']").click(function(){
+ /* $("input[type='submit']").click(function(){
     var radioValue = $("input[name='opcio']:checked").val();
       if(radioValue==="2 jugadors"){
          window.location.href='3enratlla.html',true;
@@ -22,7 +22,7 @@ var global=false;
 
       localStorage.setItem('jugador1',$("input[name='Jugador1']").val());
       localStorage.setItem('jugador2',$("input[name='Jugador2']").val());
-  });
+  });*/
 
   var td=document.getElementsByTagName("td");
 

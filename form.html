@@ -19,24 +19,26 @@
 <div class="container">
     <h1 >3 en Ratlla</h1>
     <div class="divisor">
-        
-<form id="Form" >
-    <fieldset >
-        <legend class="w-auto">
-            Formulari
-        </legend>
-        <label for="Jugador1">Jugador 1 </label> <input type="text" id="Jugador1" name="Jugador1"/><br/>
-        <label for="Jugador2">Jugador 2 </label> <input type="text" id="Jugador2" name="Jugador2"/><br/>
-        <label >Mode de joc:</label> <input type="radio" name="opcio" value="vs Màquina"> 1 Jugador <input type="radio" name="opcio" value="2 jugadors"> 2 jugadors<br>
-        <input id="valor" type="button" value="Enviar"/>
-    </fieldset>
+        <fieldset >
+            <legend class="w-auto">
+                Formulari
+            </legend>       
+<form id="Form" name="Form" action="/" accept-charset="UTF-8" method="get"  >
+    
+        <label for="Jugador1">Jugador 1 </label> <input type="text" id="Jugador1" name="Jugador1" pattern="[A-Za-z]+" required/><br/>
+        <label for="Jugador2">Jugador 2 </label> <input type="text" id="Jugador2" name="Jugador2" required/><br/>
+        <label >Mode de joc:</label> <input type="radio" name="opcio" value="vs Màquina" required> 1 Jugador <input type="radio" name="opcio" value="2 jugadors" required> 2 jugadors<br>
+        <input id="valor" type="submit" value="Enviar"/>
+   
 </form>
+</fieldset>
 </div>
 
 </div>
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/script3.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
