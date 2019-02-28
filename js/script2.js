@@ -120,7 +120,7 @@ function alerta(array){
     if (confirm("Vols tornar a jugar?")) {
       window.location.reload();
     } else {
-      window.location.href="/index.html"
+      window.location.href="index.html"
     }
     alert = function() {};
     global=true;
@@ -129,7 +129,7 @@ function alerta(array){
     if (confirm("Vols tornar a jugar?")) {
       window.location.reload();
     } else {
-      window.location.href="/index.html"
+      window.location.href="index.html"
     }
     global=true;
     alert = function() {};
