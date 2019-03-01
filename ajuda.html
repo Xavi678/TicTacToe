@@ -4,42 +4,82 @@
   <title>
     Ajuda
   </title>
-  <style>
-  body{
-    background-color:Navy;
-  }
-  .paragraf{
-    color: white;
-  }
-  .myButton {
-
-color: rgb(255, 255, 238); font-size: 50px; line-height: 50px; padding: 10px; border-radius: 14px; font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
-.myButton:hover {
-background: #1C6EA4; }
-.myButton:active {
-background: #144E75; }
-  </style>
+  <link rel="shortcut icon" href="imatges/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="imatges/favicon.ico" type="image/x-icon">
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/estilsIndex.css"> 
+  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">   
 </head>
 <body>
-  <img src="imatges/arrows.jpg" />  <p class="paragraf">
-    Fes servir les fletxes del teclat per moure't(UP ARROW: cap amunt, DOWN ARROW: cap avall, LEFT ARROW: esquerra, RIGHT ARROW: dreta)
-  </p>
-  <img src="imatges/food.png"/><p class="paragraf">
-    El food et dóna Punts
-  </p>
-  <img src="imatges/roca.bmp"/> <p class="paragraf">
-    Les roques et treuen punts i vides si hi passes per sobre, només tens tres vides <br />
-  </p>
-  <img src="imatges/grape.png"/> <p class="paragraf">
-    El raim et dóna 50 segons i punts
-  </p>
-  <img src="imatges/powerup_opt.png"/><p class="paragraf">
-     Els pows et donen 1 vida més( només en pots tenir 3 com a màxim)<br />
-  </p>
+  <div class="container">
+    <h1 class="page-header">Ajuda</h1>
+    <div class="container negre" role="tablist">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link " data-toggle="tab" href="#home">2 players mode</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu1">1 player mode</a>
+        </li>
+       
+      </ul>
 
-<!--<a href="index.html" >Tornar</a>-->
-<form action="index.html">
-    <input class="myButton" type="submit" value="Tornar" />
-</form>
+      <div class="tab-content">
+          <div id="home" class="container tab-pane active">
+              <h3>2 jugadors</h3>
+                    
+                      <p>Juga contra un altre jugador, un torn cadascú, hauràs de clicar a la casella on voldràs tirar la fitxa, fins que algú dels dos compleixi els requisits per guanyar.</p>
+                  
+                <div class="media">
+                    <div class="media-left">
+                      <img src="imatges/Captura2.PNG" class="media-object" >
+                    </div>
+                    <div class="media-body">
+                      
+                       <p>Per guanyar hauràs de posar tres fitxes iguals en diagonal, vertical o horitzonal.<br>
+              Al guanyar apareixarà un missatge dient el jugador que ha guanyat i si vols tornar a jugar a tornar a l'index de la pàgina<br></p> 
+                    </div>
+                  </div>
+            
+          </div>
+          <div id="menu1" class="container tab-pane fade">
+            <h3> 1 Jugador</h3>
+          <p>Juga contra la màquina, tu seràs les X i ella les O, per començar la partida, simplement clica en una casella, tu seràs el primer en tirar, després de que tu hagis tiratla màquina tirarà la seva fitxa, la màquina sempre intentarà guanyar-te la partida.</p>
+          <div class="media">
+              <div class="media-left">
+                <img src="imatges/Captura2.PNG" class="media-object" >
+              </div>
+              <div class="media-body">
+                
+                 <p>Per guanyar hauràs de posar tres fitxes iguals en diagonal, vertical o horitzonal.<br>
+        Al guanyar apareixarà un missatge dient el jugador que ha guanyat i si vols tornar a jugar a tornar a l'index de la pàgina<br></p> 
+              </div>
+            </div>
+        
+        </div>
+          
+        </div>
+    </div>
+    <div >
+      <table id="taula">
+        <tr>
+          <td>
+              <button type="button" class="btn btn-primary"><a href="index.html">Torna a l'index</a></button>
+          </td>
+          <td>
+              <button type="button" class="btn btn-primary"><a href="player.html">Continua</a></button>
+          </td>
+        </tr>
+      </table>
+        
+       
+       
+      </div>
+  </div>
+  
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

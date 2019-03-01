@@ -29,3 +29,31 @@ html,body{
 .container{
     margin-top: 70px;
 }
+
+label{
+    font-size: 20px;
+    color: white;
+    background: black;
+}
+.negre{
+    
+    background-color: black;
+}
+
+h3{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+img{
+    margin: 10px;
+    width: 300px;
+    
+}
+
+#taula{
+   margin: 0 auto;
+}
