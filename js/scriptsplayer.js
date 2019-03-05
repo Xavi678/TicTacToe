@@ -46,12 +46,13 @@ $("input[type='text'],select,input[type='number']").on("invalid",function(){
 
 $("form").submit(function(){
 
-    
+   
 
     //var num=Cookies.get("intent");
     int++;
     cookie("intent",int);
    mostrarI();
+   return confirm('Vols continuar?');
 });
 
 
