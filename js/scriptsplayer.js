@@ -42,6 +42,7 @@ $("input[type='text'],select,input[type='number']").on("invalid",function(){
     cookie("intent",int);
   mostrarI();
   global=true;
+  
 });
 
 $("form").submit(function(){

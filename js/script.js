@@ -8,7 +8,12 @@ var fid;
 var global=false;
 
 
+window.onload=function(){
+  document.getElementById("resultat").innerHTML=" Torn del jugador: "+ localStorage.getItem('jugador1');
+}
+  
 
+ 
 
 
  /* $("input[type='submit']").click(function(){
@@ -47,13 +52,19 @@ var l = document.getElementById("number");
         
       if(count%2==0){
         elem.setAttribute("src", "imatges/x.png");
+        elem.addEventListener("click",function(){
+          alert("Eps juagdor:"+localStorage.getItem('jugador1')+", Aquesta casella no esta buida, tira en una casella que estigui buida");
+        });
         taula[i][j]="x";
-        document.getElementById("resultat").innerHTML="Torn del "+ localStorage.getItem('jugador1');
+        document.getElementById("resultat").innerHTML="Moviment Correcte Has marcat la casella "+i+","+j+" Torn del "+ localStorage.getItem('jugador2');
         count++;
       }else{
         elem.setAttribute("src", "imatges/o.png");
+        elem.addEventListener("click",function(){
+          alert("Eps juagdor:"+localStorage.getItem('jugador2')+", Aquesta casella no esta buida, tira en una casella que estigui buida");
+        });
         taula[i][j]="o";
-        document.getElementById("resultat").innerHTML="Torn del "+ localStorage.getItem('jugador2');
+        document.getElementById("resultat").innerHTML="Moviment Correcte Has marcat la casella "+i+","+j+" Torn del "+ localStorage.getItem('jugador1');
         count++;
       }
       var thisid=document.getElementById(event.target.id)
@@ -71,7 +82,7 @@ var l = document.getElementById("number");
         if (confirm("Vols tornar a jugar?")) {
           window.location.reload();
         } else {
-          window.location.href="/index.html"
+          window.location.href="index.html"
         }
       }
     

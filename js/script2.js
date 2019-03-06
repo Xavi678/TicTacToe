@@ -10,7 +10,9 @@ var global=false;
 var ultimov;
 var pos=false;
 
-
+window.onload=function(){
+  document.getElementById("resultat").innerHTML=" Torn del jugador: "+ localStorage.getItem('jugador1');
+}
 var td=document.getElementsByTagName("td");
 
 for(var i=0;i<td.length;i++){
@@ -34,8 +36,14 @@ var l = document.getElementById("number");
    
  
       elem.setAttribute("src", "imatges/x.png");
+      elem.addEventListener("click",function(){
+        alert("Eps juagdor:"+localStorage.getItem('jugador1')+", Aquesta casella no esta buida, tira en una casella que estigui buida");
+      });
       taula[i][j]="x";
-      document.getElementById("resultat").innerHTML="Torn del "+ localStorage.getItem('jugador1');
+     
+        document.getElementById("resultat").innerHTML="Torn del "+ localStorage.getItem('jugador1');
+      
+    ///escriureLog();
      count++;
     
     var thisid=document.getElementById(event.target.id)
@@ -45,8 +53,7 @@ var l = document.getElementById("number");
     thisid.appendChild(elem);
 
     
-    
-
+ 
     tornMaquina();
 
    guanyar();
@@ -55,7 +62,7 @@ var l = document.getElementById("number");
       if (confirm("Vols tornar a jugar?")) {
         window.location.reload();
       } else {
-        window.location.href="/index.html"
+        window.location.href="index.html"
       }
     }
   
@@ -143,6 +150,9 @@ function alerta(array){
 
 function tornMaquina(){
     //alert(ultimov);
+  
+      document.getElementById("resultat").innerHTML="Torn de la maquina ";
+    
 
     var llocsBuits=[];
     
@@ -158,6 +168,7 @@ function tornMaquina(){
 
 
         }
+      
     }
 
     if(llocsBuits.length!=0){
@@ -282,10 +293,16 @@ function tornMaquina(){
    
  
     elem.setAttribute("src", "imatges/o.png");
-
+    elem.addEventListener("click",function(){
+      alert("Eps juagdor:"+localStorage.getItem('jugador1')+", Aquesta casella no esta buida, tira en una casella que estigui buida");
+    });
     document.getElementById(pos).appendChild(elem);
     
     count++;
+    setInterval(function(){
+      document.getElementById("resultat").innerHTML="Torn del "+ localStorage.getItem('jugador1');
+      
+    },3000);
         
     }
 
